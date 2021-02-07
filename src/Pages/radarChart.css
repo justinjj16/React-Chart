@@ -1,0 +1,28 @@
+.radar-chart{
+    display: flex;
+}
+.radar-chart-container{
+    width: 90%;
+}
+.filter-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filterButton{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: center;
+    background-color: yellowgreen;
+    color: #ffffff;
+    border: none;
+}
+.filterButton svg{
+    margin-right: 10px;
+}
+.filter-container{
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+}

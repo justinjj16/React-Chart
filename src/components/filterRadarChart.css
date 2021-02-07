@@ -1,0 +1,43 @@
+.flter-radar{
+    width: 300px;
+}
+.filter-Headings{
+    display: flex;
+    justify-content: space-between;
+}
+.filter-heading-item{
+    padding: 5px;
+}
+.filter-Headings .active{
+    background: red;
+}
+.future-wave-container{
+    display: flex;
+    width: 100%;
+    background: royalblue;
+}
+.future-wave{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter-pagination{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 4px;
+}
+.pagination-all{
+    background-color: red;
+    padding: 8px;
+}
+.pagination-number{
+    background: #fff;
+    padding: 8px;
+}
+.filter-year-range{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}

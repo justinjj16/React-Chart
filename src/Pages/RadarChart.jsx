@@ -10,9 +10,14 @@ const RadarChart = () => {
         const res = await getJsonData();
         const sector = [];
         const intensity = [];
-        res.length && res.map((item) => {
+        res.length && res.map((item, index) => {
             sector.push(item.sector)
             intensity.push(item.intensity ? item.intensity : 0);
+
+            item.topic && setTopics(topics => [...topics, { id: index + 1, name: item.topic }]);
+            item.sector && setSectors(sectors => [...sectors, { id: index + 1, name: item.sector }]);
+            item.region && setRegions(regions => [...regions, { id: index + 1, name: item.region }]);
+            item.pestle && setPests(pests => [...pests, { id: index + 1, name: item.pestle }]);
         });
         setOptions({ ...options, xaxis: { categories: sector } });
         setSeries([{
@@ -24,6 +29,12 @@ const RadarChart = () => {
         getDataFromDataBase();
     }, []);
     const [filterPopupVisible, setFilterPopupVisible] = useState(false);
+
+    const [topics, setTopics] = useState([{ name: 'all', id: 0 }]);
+    const [sectors, setSectors] = useState([{ name: 'all', id: 0 }]);
+    const [regions, setRegions] = useState([{ name: 'all', id: 0 }]);
+    const [pests, setPests] = useState([{ name: 'all', id: 0 }]);
+
     const [series, setSeries] = useState([{
         name: 'Series 1',
         data: [80, 50, 30, 40, 100, 20],
@@ -64,8 +75,13 @@ const RadarChart = () => {
             </div>
             {filterPopupVisible && (
                 <div className="filter-container">
-                <FilterRadarChart />
-            </div>
+                    <FilterRadarChart
+                        topics={topics}
+                        sectors={sectors}
+                        regions={regions}
+                        pests={pests}
+                    />
+                </div>
             )}
         </div>
     );

@@ -1,0 +1,53 @@
+.w-50{
+    width: 50%;
+}
+.w-100{
+    width: 100%;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #32324E;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6f82ad28;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    width: 7px;
+    background: #32324E;
+  }
+
+
+.searchBox{
+    border: none;
+	font-size: 10px;
+	height: 20px;
+}
+.chip {
+    background: red;
+    margin: 2px !important;
+  }
+  .search-wrapper{
+    overflow-y: scroll;
+    max-height: 50px;
+  }
